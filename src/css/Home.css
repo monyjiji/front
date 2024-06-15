@@ -1,11 +1,17 @@
 body {
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
+
 
 .cover-container {
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Hide overflowing content */
+  width: 100%;
   height: 500px;
+ 
 }
 
 .cover-image {
@@ -14,21 +20,24 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/home2.jpg");
+  background-image: url("../images/home2.jpg");/* Replace 'your-image.jpg' with your image path */
   background-size: cover;
-  z-index: -1;
+  z-index: -1; /* Place the image behind other content */
   background-attachment: fixed;
 }
 
 .content {
+ 
+
+
   position: absolute;
   top: 55%;
-  left: 80px;
+  left: 80px; /* Adjust left position for text */
   transform: translateY(-50%);
-  width: 400px;
-  height: 300px;
+  width: 450px; /* Adjust width of text area */
+  height: 300px; /* Adjust height of text area */
   padding: 20px;
-
+  
   color: black;
 }
 .content h1 {
@@ -39,33 +48,35 @@ body {
 .content p {
   font-size: 18px;
   margin-bottom: 30px;
+  text-align: left;
 }
-.btn {
-  color: white;
-  background-color: #1b4965;
-  border: 1px solid #1b4965;
-  cursor: pointer;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 20px;
-}
-.btn a {
-  text-decoration: none;
-  color: inherit;
-}
-
+.content button{color:white;
+background-color: #1B4965;
+border:1px solid #1B4965;
+cursor: pointer;
+padding: 10px 20px;
+font-size: 16px;
+border-radius: 20px; }
+.content button a {
+  text-decoration: none; 
+  color: inherit;}
+.content button:hover{background-color: #1B4965;}
+.content button a:hover{color:black}
 .container1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left:30px;
+  padding-right:30px;
+ 
+
+ 
 }
 
 .image {
   flex: 1;
   margin-right: 20px;
-  margin-left: 30px;
+ margin-left: 30px;
 }
 
 .image img {
@@ -74,122 +85,127 @@ body {
   display: block;
 }
 
-.ctt {
+.aboutus {
   flex: 1;
 }
+.aboutus p{text-align: left;}
 
 .buttons {
   display: flex;
   align-items: center;
-  margin-right: 300px;
-  justify-content: space-around;
-  margin-top: 20px;
-  
-  
+ padding-left: 0px;
+ 
+  margin-top:20px;
+  display: flex;
+  gap: 10px; 
+
 }
 
 .buttons button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #1b4965;
+  background-color: #1B4965; /* Example button background color */
+  color: white;
   border: none;
   border-radius: 20px;
   cursor: pointer;
+
+  border:1px solid #1B4965;
+
+  
 }
-.ctt h1 {
+.buttons button:hover{background-color: #1B4965;}
+.buttons button a {
+  text-decoration: none; 
+  color: inherit;}
+  .buttons button a:hover{background-color: #1B4965;
+  color: black;}
+
+.aboutus h1{
   font-size: 40px;
   margin-bottom: 40px;
 }
-.ctt p {
+.aboutus p {
   font-size: 18px;
   margin-bottom: 30px;
 }
-.sr {
-  background-color: #eeeeee;
-  display: flex;
+.services{background-color: #eeeeee;    display: flex;
   flex-wrap: wrap;
 }
-.sr h1 {
-  font-size: 40px;
-  margin-left: 80px;
-  margin-bottom: 50px;
-  width: 100%;
-  margin-top: 40px;
+
+.services h1{font-size: 40px;
+margin-left: 80px;
+margin-bottom: 50px;
+width: 100%;
+margin-top: 40px;
 }
+.boxcountainer{display: flex;
+  justify-content: space-between;}
 
 .box {
-  flex: 1;
-  margin-right: 150px;
-  max-width: calc(33.33% - 20px);
-  margin-left: 100px;
   text-align: center;
-}
+  width: calc(30% - 20px); /* Adjust box width and spacing as needed */
+  padding: 20px 30px;
+  }
+.box p {text-align:left;}
 
-.box:last-child {
-  margin-right: 0;
-}
+    
 
 .box img {
-  width: 40%;
+  width: 100px; /* Adjust image size as needed */
   height: auto;
-  display: block;
-  margin-left: 5px;
+  margin-bottom: 10px;
+  margin-left: 10px;
  
 }
-.box h3 {
-  margin-left: 5px;
+
+.box h3{ margin-top: 10px;
+margin-left: 5px;}
+
+.specialities {display:flex;}
+
+.left-div {
+  flex: 1;
+  position: relative;
 }
 
-.contai {
-  display: flex;
-  align-items: flex-start;
-}
-
-.imag {
-  flex: 2;
-  margin-right: 0;
-}
-
-.imag img {
+.left-div img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire div */
 }
-
-.boxes {
+.right-div {
+  flex: 1;
   display: flex;
-  flex-wrap: wrap;
-  flex: 2;
+  flex-direction: column;
 }
 
-.bx {
-  border: 1px solid #eeeeee;
+.row {
+  display: flex;
+}
+
+.box1 {
+  flex: 1;
   text-align: center;
-  padding-top: 9.5px;
-
-  padding-bottom: 14.5px;
-  flex: 0 0 calc(25% - 2px);
-  margin: 0;
+  padding: 10px;
 }
+.box1 i{  font-size: 35px;}
 
-.bx i {
-  font-size: 40px;
+.box1 h3 {
+  margin: 5px 0;/* Adjust space between icon and title */
 }
-
-.bx h3 {
-  margin-top: 6px;
-  margin-bottom: 1px;
-}
+.box1 p{text-align: center;
+  }
 
 
 .stethoscope-icon {
-  color: #3a7cbf;
+  color: #3a7Cbf; /* Change the color to blue */
 }
-.bx:hover {
-  background-color: #3a7cbf;
-  color: white;
+.box1:hover {
+  background-color: #3a7Cbf;
+  color: white; /* Change color on hover */
 }
 
-.bx:hover i {
-  color: white;
+.box1:hover i {
+  color: white; /* Change icon color on hover */
 }
