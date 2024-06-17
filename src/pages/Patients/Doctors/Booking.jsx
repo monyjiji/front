@@ -1,10 +1,25 @@
-import React from 'react';
 import Image from'../../../images/téléchargement.png';
 import '../../../css/Booking.css';
-import '../../../css/Calendar.css';
-import Calendar from '../../../components/Calendar';
 
-function DoctorAppointment() {
+
+import React, { useState } from 'react';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+
+
+
+    function Booking() {
+        const [date, setDate] = useState(new Date());
+      
+        const handleDateChange = (newDate) => {
+          setDate(newDate);
+        };
+      
+        const handleBookAppointment = () => {
+          // Simulate adding appointment to the database
+          alert(`Appointment booked for ${date.toDateString()}`);
+        };
+      
   return (
     <main>
       <div className="containerb">
@@ -40,7 +55,10 @@ function DoctorAppointment() {
           <div className="part part2">
             <h1>Select Your Date</h1>
             <div className="calendar">
-           <Calendar/>
+            <Calendar 
+              onChange={handleDateChange} 
+              value={date} 
+            />
             </div>
             <div className="availability">
               <div className="indicator available"></div>
@@ -52,7 +70,7 @@ function DoctorAppointment() {
             </div>
           </div>
           <div className="part part3">
-            <button className="book-now-button">Book Now</button>
+            <button className="book-now-button" onClick={handleBookAppointment}>Book Now</button>
           </div>
         </section>
       </div>
@@ -60,4 +78,4 @@ function DoctorAppointment() {
   );
 }
 
-export default DoctorAppointment;
+export default Booking;
