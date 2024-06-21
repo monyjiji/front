@@ -3,8 +3,6 @@ import '../../../css/DocProfile.css';
 import Profilepic from'../../../images/téléchargement.png';
 
 
-
-
 function DoctorProfile() {
   return (
     <main>
@@ -65,7 +63,7 @@ function DoctorProfile() {
               <p>Wednesday</p>
               <p>Thursday</p>
               <p>Friday</p>
-              <button className="availability-button">Check Availability</button>
+              
             </div>
             <div className="hours">
               <p>9 AM - 5 PM</p>
