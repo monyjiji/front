@@ -7,15 +7,19 @@ import PatientNewAppointment from './pages/Patients/NewApp';
 import PatientSignUp from './pages/Patients/SignUp';
 import DoctorSignUp from './pages/Doctors/Signup'
 import LogIn from './pages/Patients/SignIn';
-import DoctorLogIn from './pages/Doctors/SignIn'
+import DoctorLogIn from './pages/Doctors/SignIn';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import DocProfile from './pages/Patients/Doctors/DocProfile';
 import Booking from './pages/Patients/Doctors/Booking';
-
+import DoctorList from './pages/Patients/Doctors/DoctorList';
+import CurrentAppointments from './pages/Doctors/CurrentAppointments';
+import HistoryAppointments from './pages/Doctors/HistoryAppointments';
+import ProfileDoc from './pages/Doctors/ProfileDoc';
 
 function App() {
   return (
+   
     <BrowserRouter>
         <Header />
             <Routes>
@@ -31,10 +35,14 @@ function App() {
               <Route path="/login" element={<LogIn />}/>
               <Route path="/doctor/login" element={<DoctorLogIn/>}/>
               <Route path="*" element={<Error />}/>
+              <Route path="/patient/Doctorlist" element={<DoctorList/>}/>
+              <Route path="/doctor/appointments" element={<CurrentAppointments/>}/>
+              <Route path="/doctor/historyappointments" element={<HistoryAppointments/>}/>
+              <Route path="/doctor/ProfileDoc" element={<ProfileDoc/>}/>
             </Routes>
         <Footer />
       </BrowserRouter>
-    
+     
    
   );
 }
